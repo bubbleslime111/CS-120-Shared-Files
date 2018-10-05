@@ -1,0 +1,346 @@
+#include <iostream>
+#include <cmath>
+#include <cstdlib>
+using namespace std;
+//Variable declarations
+int health;
+int score;
+int question;
+int yournumber;
+string answer;
+int temp = rand() % 100;
+//Function Declarations
+void outputquestion();
+string getanswer();
+void checkanswer();
+void intro();
+void header();
+int main()
+{
+	header(); //Call Header function
+		question = 1; //Initialize variables
+		health = 10;
+		intro(); //Introduce backstory.
+		score = 0;
+		cout << "Knowledge is whirring within your mind, and forefront among the knowledge is this: " << temp << endl;
+		while (health>0){ //Loop which lasts until the player solves 10 riddles, or dies.
+				cout << "You approach a door, and scribbled upon it is this:\n";
+				outputquestion();
+				getanswer();
+				checkanswer();
+				question++;
+				cout << "\nYou currently have " << health << " health.\n";
+				cout << "You have successfully solved " << score << " riddles\n\n\n";
+				if (score == 10) //If ten riddles solved, you must remember the knowledge you first learned.
+				{
+					cout << "What is your number?\n";
+						cin >> yournumber;
+						if (yournumber==temp)
+						{
+							cout << "\nThe world turns white, and you are standing in a grassy field, free from the eternity of torment.\n";
+							
+						}
+						else
+						{
+							cout << "\nSuddenly you hear an all consuming scream, and the world is plunged into darkness.\n you have been eaten by a grue.\n";
+						}
+						break;
+				}
+			}
+		if (health==0)
+		{
+			cout << "\nSuddenly you hear an all consuming scream, and the world is plunged into darkness.\n you have been eaten by a grue.\n";
+		}
+		cout << "The game has ended!";
+		return 0;
+}
+
+string getanswer() 
+{
+	cin >> answer;
+	return answer;
+}
+
+void checkanswer() { //Checks if answer is correct, and reward or punish the player accordingly.
+	switch (question)
+	{
+	case 1: if (answer=="apple")
+	{
+		score++;
+		cout << "\nThe door swings open before your eyes, you walk into the next room\n";
+	}
+			else
+	{
+		health--;
+		cout << "You feel as the though the darkness begins to come closer... maybe you should be a bit more careful\n the door opens, and you step forward into a darker room than the last\n";
+	}
+			break;
+	case 2: if (answer=="silence")
+	{
+		score++;
+		cout << "\nThe door swings open before your eyes, you walk into the next room\n";
+	}
+			else
+	{
+		health--;
+		cout << "You feel as the though the darkness begins to come closer... maybe you should be a bit more careful\n the door opens, and you step forward into a darker room than the last\n";
+	}
+			break;
+	case 3: if (answer == "42")
+	{
+		score++;
+		cout << "\nThe door swings open before your eyes, you walk into the next room\n";
+	}
+			else
+	{
+		health--;
+		cout << "You feel as the though the darkness begins to come closer... maybe you should be a bit more careful\n the door opens, and you step forward into a darker room than the last\n";
+	}
+			break;
+	case 4: if (answer == "riddle")
+	{
+		score++;
+		cout << "\nThe door swings open before your eyes, you walk into the next room\n";
+	}
+			else
+	{
+		health--;
+		cout << "You feel as the though the darkness begins to come closer... maybe you should be a bit more careful\n the door opens, and you step forward into a darker room than the last\n";
+	}
+			break;
+	case 5: if (answer == "14")
+	{
+		score++;
+		cout << "\nThe door swings open before your eyes, you walk into the next room\n";
+	}
+			else
+	{
+		health--;
+		cout << "You feel as the though the darkness begins to come closer... maybe you should be a bit more careful\n the door opens, and you step forward into a darker room than the last\n";
+	}
+			break;
+	case 6: if (answer == "myself")
+	{
+		score++;
+		cout << "\nThe door swings open before your eyes, you walk into the next room\n";
+	}
+			else
+	{
+		health--;
+		cout << "You feel as the though the darkness begins to come closer... maybe you should be a bit more careful\n the door opens, and you step forward into a darker room than the last\n";
+	}
+			break;
+	case 7: if (answer == "anagram")
+	{
+		score++;
+		cout << "\nThe door swings open before your eyes, you walk into the next room\n";
+	}
+			else
+	{
+		health--;
+		cout << "You feel as the though the darkness begins to come closer... maybe you should be a bit more careful\n the door opens, and you step forward into a darker room than the last\n";
+	}
+			break;
+	case 8: if (answer == "gift")
+	{
+		score++;
+		cout << "\nThe door swings open before your eyes, you walk into the next room\n";
+	}
+			else
+	{
+		health--;
+		cout << "You feel as the though the darkness begins to come closer... maybe you should be a bit more careful\n the door opens, and you step forward into a darker room than the last\n";
+	}
+			break;
+	case 9: if (answer == "love")
+	{
+		score++;
+		cout << "\nThe door swings open before your eyes, you walk into the next room\n";
+	}
+			else
+	{
+		health--;
+		cout << "You feel as the though the darkness begins to come closer... maybe you should be a bit more careful\n the door opens, and you step forward into a darker room than the last\n";
+	}
+			break;
+	case 10: if (answer == "river")
+	{
+		score++;
+		cout << "You feel as the though the darkness begins to come closer... maybe you should be a bit more careful\n the door opens, and you step forward into a darker room than the last\n";
+		cout << "\nThe door swings open before your eyes, you walk into the next room\n";
+	}
+			 else
+	{
+		health--;
+		cout << "You feel as the though the darkness begins to come closer... maybe you should be a bit more careful\n the door opens, and you step forward into a darker room than the last\n";
+	}
+			 break;
+	case 11: if (answer == "door")
+	{
+		score++;
+		cout << "\nThe door swings open before your eyes, you walk into the next room\n";
+	}
+			 else
+	{
+		health--;
+		cout << "You feel as the though the darkness begins to come closer... maybe you should be a bit more careful\n the door opens, and you step forward into a darker room than the last\n";
+	}
+			break;
+	case 12: if (answer == "contradiction")
+	{
+		score++;
+		cout << "\nThe door swings open before your eyes, you walk into the next room\n";
+	}
+			 else
+	{
+		health--;
+		cout << "You feel as the though the darkness begins to come closer... maybe you should be a bit more careful\n the door opens, and you step forward into a darker room than the last\n";
+	}
+			 break;
+	case 13: if (answer == "unknown")
+	{
+		score++;
+		cout << "\nThe door swings open before your eyes, you walk into the next room\n";
+	}
+			 else
+	{
+		health--;
+		cout << "You feel as the though the darkness begins to come closer... maybe you should be a bit more careful\n the door opens, and you step forward into a darker room than the last\n";
+	}
+			 break;
+	case 14: if (answer == "time")
+	{
+		score++;
+		cout << "\nThe door swings open before your eyes, you walk into the next room\n";
+	}
+			 else
+	{
+		health--;
+		cout << "You feel as the though the darkness begins to come closer... maybe you should be a bit more careful\n the door opens, and you step forward into a darker room than the last\n";
+	}
+			 break;
+	case 15: if (answer == "sea")
+	{
+		score++;
+		cout << "\nThe door swings open before your eyes, you walk into the next room\n";
+	}
+			 else
+	{
+		health--;
+		cout << "You feel as the though the darkness begins to come closer... maybe you should be a bit more careful\n the door opens, and you step forward into a darker room than the last\n";
+	}
+			 break;
+	case 16: if (answer == "man")
+	{
+		score++;
+		cout << "\nThe door swings open before your eyes, you walk into the next room\n";
+	}
+			 else
+	{
+		health--;
+		cout << "You feel as the though the darkness begins to come closer... maybe you should be a bit more careful\n the door opens, and you step forward into a darker room than the last\n";
+	}
+			 break;
+	case 17: if (answer == "knowledge")
+	{
+		score++;
+		cout << "\nThe door swings open before your eyes, you walk into the next room\n";
+	}
+			 else
+	{
+		health--;
+		cout << "You feel as the though the darkness begins to come closer... maybe you should be a bit more careful\n the door opens, and you step forward into a darker room than the last\n";
+	}
+			 break;
+	case 18: if (answer == "here")
+	{
+		score++;
+		cout << "\nThe door swings open before your eyes, you walk into the next room\n";
+	}
+			 else
+	{
+		health--;
+		cout << "You feel as the though the darkness begins to come closer... maybe you should be a bit more careful\n the door opens, and you step forward into a darker room than the last\n";
+	}
+			 break;
+	case 19: if (answer == "nothing")
+	{
+		score++;
+		cout << "\nThe door swings open before your eyes, you walk into the next room\n";
+	}
+			 else
+	{
+		health--;
+		cout << "You feel as the though the darkness begins to come closer... maybe you should be a bit more careful\n the door opens, and you step forward into a darker room than the last\n";
+	}
+			 break;
+	case 20: if (answer == "open sesame")
+	{
+		score++;
+		cout << "\nThe door swings open before your eyes, you walk into the next room\n";
+	}
+			 else
+	{
+		health--;
+		cout << "You feel as the though the darkness begins to come closer... maybe you should be a bit more careful\n the door opens, and you step forward into a darker room than the last\n";
+	}
+			 break;
+
+	default: 
+		
+		break;
+	}
+}
+
+void outputquestion() //Function to print out the riddles
+{
+	switch (question){
+	case 1:cout << "Open me up and I become dark, inside is a star that shines no spark.\n";
+		break;
+	case 2:cout << "What is the music of life?\n";
+		break;
+	case 3:cout << "What is the answer to life, the universe and everything?\n";
+		break;
+	case 4:cout << "I am this, this is me, what am I?\n";
+		break;
+	case 5:cout << "Derive 14x\n";
+		break;
+	case 6:cout << "I am the one you trust the most, I'll always be there for you\n when you are happy I am there beside you. Who am I?\n";
+		break;
+	case 7:cout << "nag a ram\n";//anagram
+		break;
+	case 8:cout << "Yesterday is history, tommorow is a mystery, but today is a...\n";
+		break;
+	case 9:cout << "I am blind and will lead your way. Through thick and thin, by your side I'll stay. What am I?\n";
+		break;
+	case 10:cout << "I have a mouth but never eat, and a bed but never sleep, what am I?\n";
+		break;
+	case 11:cout << "I am a...\n";
+		break;
+	case 12:cout << "I am beautiful, ugly. I am loving, hateful. I am smart, stupid. I am loved, hated. I am fearful, fearless. What am I?\n";
+		break;
+	case 13:cout << "To know me is to destroy me, what am I?\n";
+		break;
+	case 14:cout << "I am before you, yet also behind. I am all around you, as all my hands do wind. What am I?\n";
+		break;
+	case 15:cout << "In this world, seven I be. If you know not what I am, just wait I'm the ...\n";
+		break;
+	case 16:cout << "I have 4 legs in the morning, 2 legs in the afternoon, and 3 legs in the afternoon. What am I?\n";
+		break;
+	case 17:cout << "I am here within your head and growing everyday. I can't grow forever though, so I don't always stay. What am I?\n";
+		break;
+	case 18:cout << "I am the destination you need not travel to.\n";
+		break;
+	case 19:cout << "See me and be blind, eat me and you starve, do me and become me. What am I?\n";
+		break;
+	case 20:cout << "Open says me\n";
+		break;
+	default:cout << "that's weird";
+	}
+}
+void intro() {
+	cout << "You awaken within a darkened tunnel to the sound of whispers all around.\nThis place doesn't seem altogether friendly, it would be best to escape as soon as possible.\n The stone steams with knowledge, it is probably best not to taint such power.\n";
+}
+void header(){
+	cout << "Ryan Allen, 10/4/18, CS-120-30H, Homework #5\n\n";
+}
